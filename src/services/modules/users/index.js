@@ -1,8 +1,8 @@
 import { api } from '../../api';
 export const userApi = api.injectEndpoints({
   endpoints: build => ({
-    fetchOne: build.query({
-      query: id => `/users/${id}`,
+    login: build.query({
+      query: () => '/auth/login',
     }),
   }),
   overrideExisting: false,
