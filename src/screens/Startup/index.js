@@ -3,13 +3,14 @@ import { ActivityIndicator, View } from 'react-native';
 import { useTheme } from '../../hooks';
 import { Brand } from '../../components';
 import { setDefaultTheme } from '../../store/theme';
+
 const Startup = ({ navigation }) => {
   const { Layout, Gutters } = useTheme();
   const init = async () => {
     await new Promise(resolve =>
       setTimeout(() => {
         resolve(true);
-      }, 2000),
+      }, 1000),
     );
     await setDefaultTheme({ theme: 'default', darkMode: null });
     navigation.reset({
