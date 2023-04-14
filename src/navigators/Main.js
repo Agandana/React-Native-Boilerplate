@@ -1,16 +1,15 @@
-import React from 'react';
-import Login from '../screens/Login';
+import * as React from 'react';
 import Dashboard from '../screens/Dashboard';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 // @refresh reset
 const MainNavigator = () => {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="Dashboard" component={Dashboard} />
-    </Stack.Navigator>
+    <Tab.Navigator>
+      <Tab.Screen name="Dashboard" component={Dashboard} />
+    </Tab.Navigator>
   );
 };
+
 export default MainNavigator;

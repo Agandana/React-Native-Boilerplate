@@ -12,7 +12,7 @@ const Dashboard = ({ navigation }) => {
     dispatch(removeToken());
     navigation.reset({
       index: 0,
-      routes: [{ name: 'Main' }],
+      routes: [{ name: 'Login' }],
     });
   };
 
